@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Jago</string>
+    <string name="avatar_name">Jenis Masakan</string>
+    <string name="detail">Detail</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="todo">TODO</string>
+    <string name="suka">Suka</string>
+    <string name="list_menu">List Menu</string>
+    <string name="review_menu">Review Menu</string>
+    <string name="galeri">Galeri</string>
+    <string name="copyright_2020">Copyright 2020</string>
+    <string name="aplikasi_buatan_yusron">Aplikasi Buatan Yusron</string>
+    <string name="tentang">Tentang</string>
+    <string name="tambah_rencana">Tambah Rencana</string>
+
+
+</resources>
