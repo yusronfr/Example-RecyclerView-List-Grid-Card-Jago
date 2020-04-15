@@ -165,7 +165,7 @@ public class AvatarData {
             R.drawable.taichan
     };
 
-    static ArrayList<Avatar> getListData() {
+    public static ArrayList<Avatar> getListData() {
         ArrayList<Avatar> list = new ArrayList<>();
         for (int position = 0; position < avatarNames.length; position++) {
             Avatar avatar = new Avatar();

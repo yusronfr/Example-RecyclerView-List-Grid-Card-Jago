@@ -10,10 +10,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.piyeyus.jago.Adapter.CardViewAvatarAdapter;
+import com.piyeyus.jago.Adapter.GridAvatarAdapter;
+import com.piyeyus.jago.Adapter.ListAvatarAdapter;
+
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
-    private RecyclerView rvHeroes;
+    private RecyclerView rvAvatar;
     private ArrayList<Avatar> list = new ArrayList<>();
     private String title = "Mode List";
 
@@ -21,16 +25,16 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rvHeroes = findViewById(R.id.rv_heroes);
-        rvHeroes.setHasFixedSize(true);
+        rvAvatar = findViewById(R.id.rv_avatar);
+        rvAvatar.setHasFixedSize(true);
 
         list.addAll(AvatarData.getListData());
         showRecyclerList();
     }
     private void showRecyclerList(){
-        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
+        rvAvatar.setLayoutManager(new LinearLayoutManager(this));
         ListAvatarAdapter listAvatarAdapter = new ListAvatarAdapter(list);
-        rvHeroes.setAdapter(listAvatarAdapter);
+        rvAvatar.setAdapter(listAvatarAdapter);
         listAvatarAdapter.setOnItemClickCallback(new ListAvatarAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Avatar data) {
@@ -66,9 +70,9 @@ public class HomeActivity extends AppCompatActivity {
         setActionBarTitle(title);
     }
     private void showRecyclerGrid(){
-        rvHeroes.setLayoutManager(new GridLayoutManager(this, 2));
+        rvAvatar.setLayoutManager(new GridLayoutManager(this, 2));
         GridAvatarAdapter gridAvatarAdapter = new GridAvatarAdapter(list);
-        rvHeroes.setAdapter(gridAvatarAdapter);
+        rvAvatar.setAdapter(gridAvatarAdapter);
 
         gridAvatarAdapter.setOnItemClickCallback(new GridAvatarAdapter.OnItemClickCallback() {
             @Override
@@ -79,9 +83,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void showRecyclerCardView(){
-        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
+        rvAvatar.setLayoutManager(new LinearLayoutManager(this));
         CardViewAvatarAdapter cardViewAvatarAdapter = new CardViewAvatarAdapter(list);
-        rvHeroes.setAdapter(cardViewAvatarAdapter);
+        rvAvatar.setAdapter(cardViewAvatarAdapter);
 
     }
     private void setActionBarTitle(String title) {

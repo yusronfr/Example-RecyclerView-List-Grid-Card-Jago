@@ -1,4 +1,4 @@
-package com.piyeyus.jago;
+package com.piyeyus.jago.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.piyeyus.jago.Avatar;
+import com.piyeyus.jago.R;
 
 import java.util.ArrayList;
 
